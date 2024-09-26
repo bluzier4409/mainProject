@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1bbu2egos8hx"]
+
+[ext_resource type="PackedScene" uid="uid://cj14323ybn0pn" path="res://level.tscn" id="1_fwe5b"]
+
+[node name="MainGame" type="Node2D"]
+
+[node name="Level" parent="." instance=ExtResource("1_fwe5b")]
+
+[node name="Ground" type="StaticBody2D" parent="Level"]
+position = Vector2(0, 360)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Level/Ground"]
+position = Vector2(272, -232)
+polygon = PackedVector2Array(-270, 257, 346, 257, 346, 233, -270, 233)
+
+[node name="Polygon2D" type="Polygon2D" parent="Level/Ground"]
+position = Vector2(272, -232)
+polygon = PackedVector2Array(-270, 257, 40, 256, 346, 257, 346, 233, -270, 233)
